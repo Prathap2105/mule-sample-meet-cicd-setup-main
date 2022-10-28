@@ -50,7 +50,7 @@ jobs:
 
           with:
 
-            servers: '[{"id": "anypoint-exchange", "username": "${{ secrets.ANYPOINT_USERNAME }}", "password": "${{ secrets.ANYPOINT_PASSWORD }}" }]'
+            servers: '[{"id": "anypoint-exchange", "username": "prathap1122", "password": "Kunala567}" }]'
             repositories: '[{"id": "local-repo", "url": "file:///${project.basedir}/local-repo"},{"id": "MuleRepository", "url": "https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/"},{"id": "anypoint-exchange", "url": "https://maven.anypoint.mulesoft.com/api/v2/maven"},{"id": "mulesoft-releases", "url": "https://repository.mulesoft.org/releases/"},{"id": "mule-public", "url": "https://repository.mulesoft.org/nexus/content/repositories/public"}]'
 
         - run: |
@@ -71,4 +71,4 @@ jobs:
 
         - name: Build and cloudhub deployment
 
-          run: mvn clean package deploy -DskipTests -DmuleDeploy  -Dusername=${{secrets.ANYPOINT_USERNAME }} -Dpassword=${{secrets.ANYPOINT_PASSWORD }}
+          run: mvn clean package deploy -DskipTests -DmuleDeploy  -Dusername=prathap1122 -Dpassword=Kunala567
