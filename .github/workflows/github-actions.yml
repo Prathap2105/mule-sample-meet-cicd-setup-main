@@ -1,6 +1,12 @@
 name: Git Actions
 
-on: [push]
+#on: [push]
+on:
+  push:
+    branches:
+      - master
+      - 'feature/*' # matches feature/featureA or feature/B
+      - 'feature/**' # match feature/demo/change
 
 jobs:
   run-github-actions:
